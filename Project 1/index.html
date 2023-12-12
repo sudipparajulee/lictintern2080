@@ -9,10 +9,12 @@
     
 </head>
 <body>
-    <div class="fixed bg-opacity-50 backdrop-blur-md z-20 bg-blue-600 bottom-0 right-0 left-0 top-0 flex items-center">
-        <div class="w-4/12 mx-auto">
+    <div id="popup" class="fixed hidden bg-opacity-50 backdrop-blur-md z-20 bg-blue-600 bottom-0 right-0 left-0 top-0 flex items-center">
+        <div class="w-4/12 mx-auto relative">
+            <i class="ri-close-fill text-4xl absolute px-0.5 -right-5 -top-5 bg-white rounded-full cursor-pointer" id="closebtn"></i>
             <img src="https://www.bitmapitsolution.com/images/modal_images/Untitled-1_1672117600.png" class="" alt="">
         </div>
+        <!-- <i class="ri-close-fill absolute text-white text-6xl right-14 top-14"></i> -->
     </div>
     <a id="topbtn" class="bg-indigo-900 text-white cursor-pointer fixed right-5 bottom-10 p-2 rounded"><i class="ri-arrow-up-s-line text-2xl"></i></a>
     <nav class="flex z-10 justify-between items-center px-12 shadow-lg py-2 sticky top-0 bg-white">
@@ -34,7 +36,7 @@
             </h1>
             <p class="text-gray-100">Presenting your business in a digital mode is known to be a smarter way of doing business. <br>
                 LET THE WORLD KNOW YOU EXIST</p>
-            
+                
             <div class="mt-10">
                 <a class="bg-white rounded-lg px-24 py-4 mx-1" href="">About Us</a>
                 <a class="bg-red-600 text-white rounded-lg px-24 py-4 mx-1" href="">Contact Us</a>
@@ -134,10 +136,14 @@
         </div>
     </section>
 
-    <section class="bg-[url('https://t4.ftcdn.net/jpg/02/81/89/73/360_F_281897358_3rj9ZBSZHo5s0L1ug7uuIHadSxh9Cc75.jpg')] h-96 bg-cover bg-fixed flex items-center justify-center">
-        <div class="text-center text-white">
-            <p>Want to work with Us?</p>
-            <h1 class="uppercase text-3xl font-bold">Let the world know you exist !</h1>
+    <section class="bg-[url('https://t4.ftcdn.net/jpg/02/81/89/73/360_F_281897358_3rj9ZBSZHo5s0L1ug7uuIHadSxh9Cc75.jpg')] h-96 bg-cover bg-fixed relative">
+        <div class="text-center text-white bg-blue-900 bg-opacity-50 flex items-center justify-center absolute left-0 top-0 right-0 bottom-0">
+            <div>
+                <p>Want to work with Us?</p>
+                <h1 class="uppercase text-3xl font-bold">Let the world know you exist !</h1>
+                <p class="w-8/12 mx-auto">Digitalise your business with attractive graphics, grow the customers and business. Get all IT related services and shift from the traditional way of business marketing to the new digital technology.</p>
+            </div>
+            
         </div>
     </section>
 
@@ -262,6 +268,15 @@
             window.scrollTo(0,0);
         });
         
+    </script>
+
+
+    <script>
+        var closebtn = document.getElementById('closebtn');
+        closebtn.addEventListener('click',function(){
+            // document.getElementById('popup').classList.add('hidden');
+            document.getElementById('popup').style.display = 'none';
+        });
     </script>
 
 </body>
