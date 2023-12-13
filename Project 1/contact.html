@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="popup" class="fixed hidden bg-opacity-50 backdrop-blur-md z-20 bg-blue-600 bottom-0 right-0 left-0 top-0 flex items-center">
+        <div class="w-4/12 mx-auto relative">
+            <i class="ri-close-fill text-4xl absolute px-0.5 -right-5 -top-5 bg-white rounded-full cursor-pointer" id="closebtn"></i>
+            <img src="https://www.bitmapitsolution.com/images/modal_images/Untitled-1_1672117600.png" class="" alt="">
+        </div>
+        <!-- <i class="ri-close-fill absolute text-white text-6xl right-14 top-14"></i> -->
+    </div>
+    <a id="topbtn" class="bg-indigo-900 text-white cursor-pointer fixed right-5 bottom-10 p-2 rounded"><i class="ri-arrow-up-s-line text-2xl"></i></a>
+    <nav class="flex z-10 justify-between items-center px-12 shadow-lg py-2 sticky top-0 bg-white">
+        <img src="https://www.bitmapitsolution.com/images/logo/logo.png" alt="" class="w-32">
+        <div>
+            <a href="index.html">Home</a>
+            <a href="">About Us</a>
+            <a href="#services">Services</a>
+            <a href="">Projects</a>
+            <a href="#blogs">Blogs</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <a href="" class="bg-indigo-700 text-white px-2 py-1 rounded-md">Get IT Support</a>
+    </nav>
+
+    <section class="bg-[url('https://t4.ftcdn.net/jpg/02/81/89/73/360_F_281897358_3rj9ZBSZHo5s0L1ug7uuIHadSxh9Cc75.jpg')] h-56 bg-cover relative bg-bottom">
+        <div class="absolute bg-gray-800 bg-opacity-70 inset-0 flex items-center px-20">
+            <h1 class="text-white text-2xl">Contact Us</h1>
+        </div>
+    </section>
+
+
+    <section class="py-20 px-10">
+        <h1 class="text-center text-4xl text-indigo-900">Contact Information</h1>
+        <p class="text-center text-indigo-600">Find Us</p>
+        <div class="grid grid-cols-2 py-20 gap-10">
+            <div>
+                <img src="https://www.bitmapitsolution.com/images/contact_side.svg" alt="">
+            </div>
+            <div>
+                <div class="grid grid-cols-2 gap-10">
+                    <p>Bharatpur-3, Belchowk,Narayangarh</p>
+                    <p>Bharatpur-3, Belchowk,Narayangarh</p>
+                    <p>Bharatpur-3, Belchowk,Narayangarh</p>
+                    <p>Bharatpur-3, Belchowk,Narayangarh</p>
+                </div>
+                <form action="" class="mt-10">
+                    <div class="grid grid-cols-2 gap-10">
+                        <div>
+                            <label for="">Name <span class="text-indigo-500">*</span></label>
+                            <input type="text" placeholder="Enter Your Name" class="block w-full border border-gray-500 p-2 rounded outline-indigo-500">
+                        </div>
+
+                        <div>
+                            <label for="">Email <span class="text-indigo-500">*</span></label>
+                            <input type="text" placeholder="Enter Your Email" class="block w-full border border-gray-500 p-2 rounded outline-indigo-500">
+                        </div>
+                    </div>
+
+                    <div class="mt-5">
+                        <label for="">Subject <span class="text-indigo-500">*</span></label>
+                        <input type="text" placeholder="Subject" class="block w-full border border-gray-500 p-2 rounded outline-indigo-500">
+                    </div>
+
+                    <div class="mt-5">
+                        <label for="">Subject <span class="text-indigo-500">*</span></label>
+                        <textarea placeholder="Enter Your Message" class="block w-full border border-gray-500 p-2 rounded outline-indigo-500" name="" id="" cols="30" rows="5"></textarea>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="bg-indigo-900 px-16 py-10 grid grid-cols-4 gap-10">
+            <div>
+                <h1 class="font-bold text-xl text-white uppercase">Bitmap I.T. Solution Pvt. Ltd.</h1>
+                <p class="text-sm mt-5 text-gray-300 text-justify">BITS is a creatively driven integrated Business Consulting, Advertising agency and IT company located in Narayangarh that creates high-impact business solutions for both traditional and digital media to its clients.</p>
+            </div>
+
+            <div class="pl-20">
+                <h1 class="font-bold text-xl text-white uppercase">Useful Links</h1>
+                <p class="text-sm mt-5 text-gray-300">
+                    <a class="block" href="">Home</a><br>
+                    <a class="block" href="">About Us</a><br>
+                    <a class="block" href="">Services</a><br>
+                    <a class="block" href="">Projects</a><br>
+                    <a class="block" href="">Blogs</a><br>
+                    <a class="block" href="">Contact Us</a><br>
+                </p>
+            </div>
+
+            <div>
+                <h1 class="font-bold text-xl text-white uppercase">Contact Us</h1>
+                <p class="text-sm mt-5 text-gray-300">
+                    <span class="block mt-4"><i class="ri-map-pin-line"></i> Bharatpur-3, Belchowk, Narayangarh, Nepal</span>
+                    <span class="block mt-4"><i class="ri-phone-line"></i> 056-596250</span>
+                    <span class="block mt-4"><i class="ri-phone-line"></i> 9855011559, 9865042465</span>
+                    <span class="block mt-4"><i class="ri-mail-line"></i> info@bitmapitsolution.com</span>
+                </p>
+            </div>
+
+            <div>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbitmapitsolution&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=292504516900196" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+
+
+        </div>
+        <div class="bg-indigo-700 text-center py-4">
+            <p class="text-indigo-200">Copyright © 2023 <span class="text-white">Bitmap I.T. Solution Pvt. Ltd.</span> All Rights Reserveds</p>
+        </div>
+    </footer>
+
+    <script>
+        var topbtn = document.getElementById('topbtn');
+        topbtn.style.display = 'none';
+        // alert('hello');
+        // window.onscroll = function() {
+        //     scrollFunction();
+        // }
+        window.addEventListener('scroll',function(){
+            scrollFunction();
+        })
+
+        function scrollFunction(){
+            if(window.pageYOffset > 200)
+            {
+                topbtn.style.display = 'flex';
+            }
+            else{
+                topbtn.style.display = 'none';
+            }
+        }
+
+        topbtn.addEventListener('click',function(){
+            window.scrollTo(0,0);
+        });
+        
+    </script>
+
+
+    
+
+</body>
+</html>
