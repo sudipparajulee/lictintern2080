@@ -6,6 +6,11 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     
 </head>
 <body>
@@ -135,6 +140,66 @@
             
         </div>
     </section>
+
+
+    <section class="py-16 bg-indigo-900">
+        <h2 class="text-3xl text-center text-white font-bold">Testimonials</h2>
+        <p class="text-center text-gray-200 mt-2">What our clients say</p>
+
+
+            <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <div class="my-10">
+                    <img src="https://www.bitmapitsolution.com/images/testimonial_images/bipinkandel_1684143077.jpg" alt="" class="h-20 rounded-full mx-auto">
+                    <div class="text-center text-gray-200">
+                        <p class="text-2xl">Bipin Kandel</p>
+                        <p>Founder of V-group</p>
+                        <p class="w-8/12 mx-auto mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quidem aliquid expedita sint amet alias quas explicabo distinctio, mollitia ex voluptatum aperiam aliquam possimus quisquam. Repellendus sed quae recusandae atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia. Autem id atque architecto, fuga fugiat nam facere quibusdam adipisci accusamus? At debitis aliquam aperiam exercitationem quidem mollitia animi eos.</p>
+                    </div>
+                </div>  
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="my-10">
+                    <img src="https://www.bitmapitsolution.com/images/testimonial_images/bipinkandel_1684143077.jpg" alt="" class="h-20 rounded-full mx-auto">
+                    <div class="text-center text-gray-200">
+                        <p class="text-2xl">Bipin Kandel</p>
+                        <p>Founder of V-group</p>
+                        <p class="w-8/12 mx-auto mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quidem aliquid expedita sint amet alias quas explicabo distinctio, mollitia ex voluptatum aperiam aliquam possimus quisquam. Repellendus sed quae recusandae atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia. Autem id atque architecto, fuga fugiat nam facere quibusdam adipisci accusamus? At debitis aliquam aperiam exercitationem quidem mollitia animi eos.</p>
+                    </div>
+                </div>  
+            </div>
+
+
+            <div class="swiper-slide">
+                <div class="my-10">
+                    <img src="https://www.bitmapitsolution.com/images/testimonial_images/bipinkandel_1684143077.jpg" alt="" class="h-20 rounded-full mx-auto">
+                    <div class="text-center text-gray-200">
+                        <p class="text-2xl">Bipin Kandel</p>
+                        <p>Founder of V-group</p>
+                        <p class="w-8/12 mx-auto mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quidem aliquid expedita sint amet alias quas explicabo distinctio, mollitia ex voluptatum aperiam aliquam possimus quisquam. Repellendus sed quae recusandae atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia. Autem id atque architecto, fuga fugiat nam facere quibusdam adipisci accusamus? At debitis aliquam aperiam exercitationem quidem mollitia animi eos.</p>
+                    </div>
+                </div>  
+            </div>
+
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+
+        
+        </div>
+        
+    </section>
+
+
+
+
 
     <section class="bg-[url('https://t4.ftcdn.net/jpg/02/81/89/73/360_F_281897358_3rj9ZBSZHo5s0L1ug7uuIHadSxh9Cc75.jpg')] h-96 bg-cover bg-fixed relative">
         <div class="text-center text-white bg-blue-900 bg-opacity-50 flex items-center justify-center absolute left-0 top-0 right-0 bottom-0">
@@ -276,6 +341,22 @@
         closebtn.addEventListener('click',function(){
             // document.getElementById('popup').classList.add('hidden');
             document.getElementById('popup').style.display = 'none';
+        });
+    </script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        autoplay: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
         });
     </script>
 
