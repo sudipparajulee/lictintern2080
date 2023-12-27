@@ -15,14 +15,14 @@
 </head>
 <body>
     <div id="popup" class="fixed hidden bg-opacity-50 backdrop-blur-md z-20 bg-blue-600 bottom-0 right-0 left-0 top-0 flex items-center">
-        <div class="w-4/12 mx-auto relative">
+        <div class="xl:w-4/12 lg:w-6/12 md:9/12 w-11/12 mx-auto relative">
             <i class="ri-close-fill text-4xl absolute px-0.5 -right-5 -top-5 bg-white rounded-full cursor-pointer" id="closebtn"></i>
             <img src="https://www.bitmapitsolution.com/images/modal_images/Untitled-1_1672117600.png" class="" alt="">
         </div>
         <!-- <i class="ri-close-fill absolute text-white text-6xl right-14 top-14"></i> -->
     </div>
     <a id="topbtn" class="bg-indigo-900 text-white cursor-pointer fixed right-5 bottom-10 p-2 rounded"><i class="ri-arrow-up-s-line text-2xl"></i></a>
-    <nav class="flex z-10 justify-between items-center px-12 shadow-lg py-2 sticky top-0">
+    <nav class="hidden lg:flex z-10 bg-white justify-between items-center px-12 shadow-lg py-2 sticky top-0">
         <img src="https://www.bitmapitsolution.com/images/logo/logo.png" alt="" class="w-32">
         <div>
             <a href="index.html">Home</a>
@@ -35,20 +35,38 @@
         <a href="" class="bg-indigo-700 text-white px-2 py-1 rounded-md">Get IT Support</a>
     </nav>
 
-    <div class="grid grid-cols-2 gap-10 bg-indigo-900 p-20 pb-48 items-center">
+    <nav class="block lg:hidden px-4 bg-white shadow-lg py-2 sticky top-0 z-20">
+        <div class="flex justify-between items-center">
+            <img src="https://www.bitmapitsolution.com/images/logo/logo.png" alt="" class="w-32">
+            <i onclick="toggleMenu()" class="ri-menu-fill text-3xl"></i>
+        </div>
+        <div id="mynav" class="hidden">
+            <div>
+                <a class="block my-4" href="index.html">Home</a>
+                <a class="block my-4" href="">About Us</a>
+                <a class="block my-4" href="#services">Services</a>
+                <a class="block my-4" href="">Projects</a>
+                <a class="block my-4" href="#blogs">Blogs</a>
+                <a class="block my-4" href="contact.html">Contact Us</a>
+            </div>
+            <a href="" class="bg-indigo-700 text-white px-2 py-1 rounded-md">Get IT Support</a>
+        </div>
+    </nav>
+
+    <div class="grid md:grid-cols-2 gap-10 bg-indigo-900 md:p-20 p-5 pb-48 items-center">
         <div>
-            <h1 class="font-bold text-white text-5xl leading-normal">IT Solutions & Graphics Services Company
+            <h1 class="font-bold text-white md:text-5xl text-2xl leading-normal">IT Solutions & Graphics Services Company
             </h1>
             <p class="text-gray-100">Presenting your business in a digital mode is known to be a smarter way of doing business. <br>
                 LET THE WORLD KNOW YOU EXIST</p>
                 
             <div class="mt-10">
-                <a class="bg-white rounded-lg px-24 py-4 mx-1" href="">About Us</a>
-                <a class="bg-red-600 text-white rounded-lg px-24 py-4 mx-1" href="">Contact Us</a>
+                <a class="bg-white inline-block rounded-lg px-24 py-4 mx-1" href="">About Us</a>
+                <a class="bg-red-600 inline-block mt-5 text-white rounded-lg px-24 py-4 mx-1" href="">Contact Us</a>
             </div>
         </div>
         <div>
-            <img class="w-8/12 ml-auto mr-16" src="https://www.bitmapitsolution.com/images/home.png" alt="">
+            <img class="lg:w-8/12 md:w-11/12 ml-auto xl:py-10 lg:py-5 lg:mr-16" src="https://www.bitmapitsolution.com/images/home.png" alt="">
         </div>
     </div>
     <img src="https://www.bitmapitsolution.com/images/home_bottom_shape.png" alt="" class="-mt-52 h-56 w-full">
@@ -449,7 +467,7 @@
     direction: 'horizontal',
     loop: true,
     autoplay: true,
-    slidesPerView: 5,
+    // slidesPerView: 1,
     spaceBetween: 30,
 
     // If we need pagination
@@ -458,7 +476,40 @@
         clickable: true,
     },
 
+    breakpoints: {
+        0:{
+            slidesPerView: 1,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 50,
+        },
+      },
+
     });
+</script>
+
+<script>
+    function toggleMenu()
+    {
+        var menu = document.getElementById('mynav');
+        if(menu.style.display == 'block')
+        {
+            menu.style.display = 'none';
+        }
+        else
+        {
+            menu.style.display = 'block';
+        }
+    }
 </script>
 
 </body>
