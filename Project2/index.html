@@ -121,7 +121,7 @@
       </div>
 
       <div
-        id="donate"
+        onclick="showModal()"
         class="bg-orange-500 text-white px-4 py-3 rounded-lg hover:bg-indigo-900 duration-700 cursor-pointer"
       >
         <p><i class="ri-heart-fill"></i> Make a Donation</p>
@@ -487,12 +487,12 @@
     <!-- glass morphism -->
 
     <script>
-      var donate = document.getElementById("donate");
       document.getElementById("backblur").style.display = "none";
 
-      donate.addEventListener("click", function () {
+      function showModal()
+      {
         document.getElementById("backblur").style.display = "block";
-      });
+      }
     </script>
 
     <!-- close of glass morphism -->
