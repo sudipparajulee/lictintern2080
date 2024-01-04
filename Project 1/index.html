@@ -17,7 +17,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 />
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+    <style>
+        .slide-bg {
+            --hover: red;
+        }
+        .ease-in-out {
+            transition-timing-function: cubic-bezier(.4,0,.2,1);
+        }
+    </style>
 </head>
 <body>
     <div id="popup" class="fixed hidden bg-opacity-50 backdrop-blur-md z-20 bg-blue-600 bottom-0 right-0 left-0 top-0 flex items-center">
@@ -67,7 +74,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                 LET THE WORLD KNOW YOU EXIST</p>
                 
             <div class="mt-10">
-                <a class="slidebg bg-white inline-block rounded-lg px-24 py-4 mx-1" href="">About Us</a>
+                <a class="slide-bg bg-white  text-center hover:text-white  duration-700 delay-50 transition-all ease-in-out py-4 px-10 rounded-md hover:bg-[#00489e]" href="">About Us</a>
                 <a class="bg-red-600 inline-block mt-5 text-white rounded-lg px-24 py-4 mx-1" href="">Contact Us</a>
             </div>
         </div>
