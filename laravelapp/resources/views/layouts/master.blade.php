@@ -29,7 +29,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    <div id="popup" class="fixed hidden bg-opacity-50 backdrop-blur-md z-20 bg-blue-600 bottom-0 right-0 left-0 top-0 flex items-center">
+    <div id="popup" class="fixed hidden bg-opacity-50 backdrop-blur-md z-20 bg-blue-600 bottom-0 right-0 left-0 top-0  items-center">
         <div class="xl:w-4/12 lg:w-6/12 md:9/12 w-11/12 mx-auto relative">
             <i class="ri-close-fill text-4xl absolute px-0.5 -right-5 -top-5 bg-white rounded-full cursor-pointer" id="closebtn"></i>
             <img src="https://www.bitmapitsolution.com/images/modal_images/Untitled-1_1672117600.png" class="" alt="">
