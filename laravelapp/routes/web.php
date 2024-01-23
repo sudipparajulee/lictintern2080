@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\NoticeController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[PagesController::class,'index']);
 Route::get('/about',[PagesController::class,'about']);
 Route::get('/contact',[PagesController::class,'contact']);
+
+Route::get('/notice',[NoticeController::class,'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
