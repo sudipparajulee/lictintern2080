@@ -23,8 +23,8 @@
             <div class="w-56 h-screen bg-gray-100 shadow">
                 <img src="{{asset('images/logo.png')}}" class="mt-5 w-full" alt="">
                 <div class="mt-5 text-blue-900">
-                    <a href="" class="p-2 block hover:bg-blue-500 hover:text-white text-lg border-b border-gray-300"><i class="ri-dashboard-2-line"></i> Dashboard</a>
-                    <a href="/notice" class="p-2 block hover:bg-blue-500 hover:text-white text-lg border-b border-gray-300"><i class="ri-file-paper-2-line"></i> Notice</a>
+                    <a href="{{route('dashboard')}}" class="p-2 block hover:bg-blue-500 hover:text-white text-lg border-b border-gray-300"><i class="ri-dashboard-2-line"></i> Dashboard</a>
+                    <a href="{{route('notice.index')}}" class="p-2 block hover:bg-blue-500 hover:text-white text-lg border-b border-gray-300"><i class="ri-file-paper-2-line"></i> Notice</a>
                     <a href="" class="p-2 block hover:bg-blue-500 hover:text-white text-lg border-b border-gray-300"><i class="ri-image-2-line"></i> Banner</a>
                     <a href="" class="p-2 block hover:bg-blue-500 hover:text-white text-lg border-b border-gray-300"><i class="ri-window-line"></i> Projects</a>
                     <a href="" class="p-2 block hover:bg-blue-500 hover:text-white text-lg border-b border-gray-300"><i class="ri-news-line"></i> Blogs</a>
@@ -34,6 +34,8 @@
                 </div>
             </div>
             <div class="p-4 flex-1">
+                <h1 class="text-3xl font-bold text-indigo-600">@yield('heading')</h1>
+                <hr class="my-2 h-1 bg-red-600">
                 @yield('content')
             </div>
         </div>
