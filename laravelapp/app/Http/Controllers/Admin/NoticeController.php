@@ -3,13 +3,15 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Notice;
 use Illuminate\Http\Request;
 
 class NoticeController extends Controller
 {
     public function index()
     {
-        return view('admin.notice.index');
+        $notices = Notice::orderBy('priority')->get();
+        return view('admin.notice.index',compact('notices'));
     }
 
     public function create()
@@ -21,9 +23,20 @@ class NoticeController extends Controller
     {
         $data = $request->validate([
             'notice_text' => 'required',
-            'notice_date' => 'required',
-            'priority' => 'required',
+            'notice_date' => 'required|date',
+            'priority' => 'required|integer',
             'show' => 'required',
         ]);
+
+        Notice::create($data);
+
+        return redirect(route('notice.index'));
+
+    }
+
+    public function edit($id)
+    {
+        $notice = Notice::find($id);
+        return view('admin.notice.edit',compact('notice'));
     }
 }

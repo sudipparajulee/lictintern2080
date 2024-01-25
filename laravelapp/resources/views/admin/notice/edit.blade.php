@@ -1,19 +1,19 @@
 @extends('layouts.app')
 @section('heading')
-    Create Notice
+    Edit Notice
 @endsection
 @section('content')
     <form action="{{route('notice.store')}}" method="POST">
         @csrf
-        <input type="text" name="notice_text" placeholder="Enter Notice" class="w-full my-2 rounded" value="{{old('notice_text')}}">
+        <input type="text" name="notice_text" placeholder="Enter Notice" class="w-full my-2 rounded" value="{{$notice->notice_text}}">
         @error('notice_text')
             <p class="text-red-500 -mt-2 text-sm">* {{$message}}</p>
         @enderror
-        <input type="date" name="notice_date" class="w-full my-2 rounded" min="{{date('Y-m-d')}}" value="{{old('notice_date')}}">
+        <input type="date" name="notice_date" class="w-full my-2 rounded" min="{{date('Y-m-d')}}" value="{{$notice->notice_date}}">
         @error('notice_date')
             <p class="text-red-500 -mt-2 text-sm">* {{$message}}</p>
         @enderror
-        <input type="text" name="priority" placeholder="Enter Priority" class="w-full my-2 rounded" value="{{old('priority')}}">
+        <input type="text" name="priority" placeholder="Enter Priority" class="w-full my-2 rounded" value="{{$notice->priority}}">
         @error('priority')
             <p class="text-red-500 -mt-2 text-sm">* {{$message}}</p>
         @enderror
