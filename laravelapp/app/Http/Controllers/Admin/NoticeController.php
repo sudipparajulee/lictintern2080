@@ -39,4 +39,19 @@ class NoticeController extends Controller
         $notice = Notice::find($id);
         return view('admin.notice.edit',compact('notice'));
     }
+
+    public function update(Request $request, $id)
+    {
+        $data = $request->validate([
+            'notice_text' => 'required',
+            'notice_date' => 'required|date',
+            'priority' => 'required|integer',
+            'show' => 'required',
+        ]);
+
+        $notice = Notice::find($id);
+        $notice->update($data);
+
+        return redirect(route('notice.index'));
+    }
 }

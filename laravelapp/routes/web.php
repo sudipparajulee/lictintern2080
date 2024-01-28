@@ -31,6 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/notice/create',[NoticeController::class,'create'])->name('notice.create');
     Route::post('/notice/store',[NoticeController::class,'store'])->name('notice.store');
     Route::get('/notice/{id}/edit',[NoticeController::class,'edit'])->name('notice.edit');
+    Route::post('/notice/{id}/update',[NoticeController::class,'update'])->name('notice.update');
 
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
