@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\Admin\NoticeController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ProfileController;
@@ -33,6 +34,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/notice/{id}/edit',[NoticeController::class,'edit'])->name('notice.edit');
     Route::post('/notice/{id}/update',[NoticeController::class,'update'])->name('notice.update');
     Route::delete('/notice/destroy',[NoticeController::class,'destroy'])->name('notice.destroy');
+
+    //Clients
+    Route::get('/client',[ClientController::class,'index'])->name('client.index');
+    Route::get('/client/create',[ClientController::class,'create'])->name('client.create');
+    Route::post('/client/store',[ClientController::class,'store'])->name('client.store');
+    Route::get('/client/{id}/edit',[ClientController::class,'edit'])->name('client.edit');
+    Route::post('/client/{id}/update',[ClientController::class,'update'])->name('client.update');
+    Route::delete('/client/destroy',[ClientController::class,'destroy'])->name('client.destroy');
+
 
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

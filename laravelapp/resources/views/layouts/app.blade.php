@@ -32,7 +32,7 @@
                 <div class="mt-5 text-blue-900">
                     <a href="{{route('dashboard')}}" class="p-2 block hover:bg-blue-500 hover:text-white text-lg border-b border-gray-300"><i class="ri-dashboard-2-line"></i> Dashboard</a>
                     <a href="{{route('notice.index')}}" class="p-2 block hover:bg-blue-500 hover:text-white text-lg border-b border-gray-300"><i class="ri-file-paper-2-line"></i> Notice</a>
-                    <a href="" class="p-2 block hover:bg-blue-500 hover:text-white text-lg border-b border-gray-300"><i class="ri-image-2-line"></i> Banner</a>
+                    <a href="{{route('client.index')}}" class="p-2 block hover:bg-blue-500 hover:text-white text-lg border-b border-gray-300"><i class="ri-group-line"></i> Clients</a>
                     <a href="" class="p-2 block hover:bg-blue-500 hover:text-white text-lg border-b border-gray-300"><i class="ri-window-line"></i> Projects</a>
                     <a href="" class="p-2 block hover:bg-blue-500 hover:text-white text-lg border-b border-gray-300"><i class="ri-news-line"></i> Blogs</a>
                     <a href="" class="p-2 block hover:bg-blue-500 hover:text-white text-lg border-b border-gray-300"><i class="ri-contacts-book-line"></i> Contacts</a>

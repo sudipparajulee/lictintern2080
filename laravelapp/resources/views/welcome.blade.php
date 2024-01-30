@@ -18,16 +18,13 @@
     </div>
     <img src="https://www.bitmapitsolution.com/images/home_bottom_shape.png" alt="" class="-mt-52 h-56 w-full">
 
-    <div class="grid grid-cols-4 gap-10">
-        <div class="bg-green-500 col-span-3">
-            <h1>This is Swiper Area</h1>
-        </div>
-        <div class="bg-blue-400">
-            <h1>This is Officer Area</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-        </div>
+    <div class="flex">
+        <p class="bg-red-600 text-white text-lg font-bold px-10 py-2">Notice</p>
+        <marquee class="bg-gray-100 text-gray-800 text-lg font-bold px-10 py-2" scrollamount="10" onmouseover="this.stop()" onmouseout="this.start()">
+            @foreach ($notices as $notice)
+                {{$notice->notice_text}} ||
+            @endforeach
+        </marquee>
     </div>
 
 
