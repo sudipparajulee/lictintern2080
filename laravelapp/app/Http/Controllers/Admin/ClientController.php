@@ -10,7 +10,8 @@ class ClientController extends Controller
 {
     public function index()
     {
-        return view('admin.client.index');
+        $clients = Client::orderBy('priority')->get();
+        return view('admin.client.index',compact('clients'));
     }
 
     public function create()
@@ -25,12 +26,14 @@ class ClientController extends Controller
             'priority' => 'required|integer',
         ]);
 
+
+
         if($request->hasFile('photopath'))
         {
             $file = $request->photopath;
             //get file name with extension
-            $filname = $file->getClientOriginalName();
-            $filename = time().'_'.$filname;
+            $filename = $file->getClientOriginalName();
+            $filename = time().'_'.$filename;
             //store file in public
             $file->move('images/client',$filename);
             $data['photopath'] = $filename;

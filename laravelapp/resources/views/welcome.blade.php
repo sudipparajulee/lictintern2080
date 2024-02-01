@@ -274,67 +274,14 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
             <!-- Slides -->
+
+            @foreach($clients as $client)
             <div class="swiper-slide">
                 <div class="px-2 py-5 border shadow rounded-lg">
-                    <img class="h-28 mx-auto" src="https://www.bitmapitsolution.com/images/client_images/logo_1677834370.jpg" alt="">
+                    <img class="h-28 mx-auto" src="{{asset('images/client/'.$client->photopath)}}" alt="">
                 </div>
             </div>
-
-            <div class="swiper-slide">
-                <div class="px-2 py-5 border shadow rounded-lg">
-                    <img class="h-28 mx-auto" src="https://www.bitmapitsolution.com/images/client_images/logo_1677834370.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="swiper-slide">
-                <div class="px-2 py-5 border shadow rounded-lg">
-                    <img class="h-28 mx-auto" src="https://www.bitmapitsolution.com/images/client_images/logo_1677834370.jpg" alt="">
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="px-2 py-5 border shadow rounded-lg">
-                    <img class="h-28 mx-auto" src="https://www.bitmapitsolution.com/images/client_images/logo_1677834370.jpg" alt="">
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="px-2 py-5 border shadow rounded-lg">
-                    <img class="h-28 mx-auto" src="https://www.bitmapitsolution.com/images/client_images/logo_1677834370.jpg" alt="">
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="px-2 py-5 border shadow rounded-lg">
-                    <img class="h-28 mx-auto" src="https://www.bitmapitsolution.com/images/client_images/logo_1677834370.jpg" alt="">
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="px-2 py-5 border shadow rounded-lg">
-                    <img class="h-28 mx-auto" src="https://www.bitmapitsolution.com/images/client_images/logo_1677834370.jpg" alt="">
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="px-2 py-5 border shadow rounded-lg">
-                    <img class="h-28 mx-auto" src="https://www.bitmapitsolution.com/images/client_images/logo_1677834370.jpg" alt="">
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="px-2 py-5 border shadow rounded-lg">
-                    <img class="h-28 mx-auto" src="https://www.bitmapitsolution.com/images/client_images/logo_1677834370.jpg" alt="">
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="px-2 py-5 border shadow rounded-lg">
-                    <img class="h-28 mx-auto" src="https://www.bitmapitsolution.com/images/client_images/logo_1677834370.jpg" alt="">
-                </div>
-            </div>
-
+            @endforeach
 
             </div>
             <!-- If we need pagination -->
