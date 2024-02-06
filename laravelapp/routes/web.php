@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ClientController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\NoticeController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ProfileController;
@@ -22,11 +23,9 @@ Route::get('/about',[PagesController::class,'about']);
 Route::get('/contact',[PagesController::class,'contact']);
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
+
+    Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('dashboard');
 
     Route::get('/notice',[NoticeController::class,'index'])->name('notice.index');
     Route::get('/notice/create',[NoticeController::class,'create'])->name('notice.create');
