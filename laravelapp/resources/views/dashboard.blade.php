@@ -20,11 +20,15 @@
             <h1 class="text-4xl font-bold">10</h1>
         </div>
 
-        <div class="">
-            <canvas id="myChart"></canvas>
-          </div>
-
+        <div class="bg-green-600 text-white rounded-lg flex justify-between py-4 px-2">
+            <h1 class="text-xl">Total Visits</h1>
+            <h1 class="text-4xl font-bold">{{$totalvisits}}</h1>
+        </div>
     </div>
+
+    <div class="">
+        <canvas id="myChart"></canvas>
+      </div>
 
 
 
@@ -37,11 +41,11 @@
           type: 'line',
           fill: true,
           data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: {!! $visitdate !!},
             datasets: [{
-              label: '# of Votes',
-              data: [12, 19, 3, 5, 2, 3],
-              borderWidth: 1
+              label: 'No. of Visits',
+              data: {!! $visits !!},
+              borderWidth: 1,
             }]
           },
           options: {

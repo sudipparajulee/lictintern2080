@@ -27,7 +27,7 @@
     </head>
     <body class="font-sans antialiased">
         <div class="flex">
-            <div class="w-56 h-screen bg-gray-100 shadow">
+            <div class="w-56 fixed h-screen bg-gray-100 shadow">
                 <img src="{{asset('images/logo.png')}}" class="mt-5 w-full" alt="">
                 <div class="mt-5 text-blue-900">
                     <a href="{{route('dashboard')}}" class="p-2 block hover:bg-blue-500 hover:text-white text-lg border-b border-gray-300"><i class="ri-dashboard-2-line"></i> Dashboard</a>
@@ -40,7 +40,7 @@
 
                 </div>
             </div>
-            <div class="p-4 flex-1">
+            <div class="p-4 w-full pl-60">
                 <h1 class="text-3xl font-bold text-indigo-600">@yield('heading')</h1>
                 <hr class="my-2 h-1 bg-red-600">
                 @yield('content')
