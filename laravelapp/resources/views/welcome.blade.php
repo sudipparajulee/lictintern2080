@@ -1,5 +1,6 @@
 @extends('layouts.master')
 @section('content')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/counterup/1.0.0/jquery.counterup.min.css">
     <div class="grid md:grid-cols-2 gap-10 bg-indigo-900 md:p-20 p-5 pb-48 items-center">
         <div>
             <h1 class="font-bold text-white md:text-5xl text-2xl leading-normal">IT Solution & Graphics Services Company
@@ -27,6 +28,45 @@
         </marquee>
     </div>
 
+    <div style="background-image: url('{{ asset('/images/logo.png') }}')"
+    class="w-full  2xl:h-[24rem] xl:h-[20rem]  lg:h-[28rem] sm:h-[28rem] h-[32rem] text-center bg-cover bg-center bg-fixed relative">
+    <div class="absolute inset-0 bg-indigo-900 bg-opacity-50 flex items-center justify-center">
+        <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-36 numbers1">
+            <div>
+                <div class="relative text-white">
+                    <span class="md:text-6xl text-4xl font-bold count1">59</span>
+                    <span class="md:text-3xl text-3xl font-bold absolute md:top-0 -top-2">+</span>
+                </div>
+                <p class="md:text-xl font-bold mt-2 text-white">Clients</p>
+            </div>
+
+            <div>
+                <div class="relative text-white">
+                    <span class="md:text-6xl text-4xl font-bold count1">80</span>
+                    <span class="md:text-3xl text-3xl font-bold absolute md:top-0 -top-2">+</span>
+                </div>
+                <p class="md:text-xl font-bold mt-2 text-white">Projects</p>
+            </div>
+
+
+            <div>
+                <div class="relative text-white">
+                    <span class="md:text-6xl text-4xl font-bold count1">1200</span>
+                    <span class="md:text-3xl text-3xl font-bold absolute md:top-0 -top-2">+</span>
+                </div>
+                <p class="md:text-xl font-bold mt-2 text-white">Hours Of Support</p>
+            </div>
+
+            <div>
+                <div class="relative text-white">
+                    <span class="md:text-6xl text-4xl font-bold count1">10</span>
+                    <span class="md:text-3xl text-3xl font-bold absolute md:top-0 -top-2">+</span>
+                </div>
+                <p class="md:text-xl font-bold mt-2 text-white">Hard Workers</p>
+            </div>
+        </div>
+    </div>
+</div>
 
     <section class="py-20" id="services">
         <h1 class="text-3xl text-center text-indigo-900">Services</h1>
@@ -292,5 +332,28 @@
         </div>
 
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        var section1 = $('.numbers1').offset();
+        var hasEntered1 = false;
+        window.addEventListener('scroll', (e) => {
+            var shouldAnimate1 = (window.scrollY + window.innerHeight) >= section1.top;
 
+            if (shouldAnimate1 && !hasEntered1) {
+                hasEntered1 = true;
+
+                $('.count1').each(function() {
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: 4000,
+                        easing: 'swing',
+                        step: function(now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
+                });
+            }
+        });
+     </script>
 @endsection
