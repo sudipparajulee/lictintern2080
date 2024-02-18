@@ -27,6 +27,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </style>
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=604f09836ac5460013735f86&product=inline-share-buttons' async='async'></script>
 </head>
 <body>
     <div id="popup" class="fixed hidden bg-opacity-50 backdrop-blur-md z-20 bg-blue-600 bottom-0 right-0 left-0 top-0  items-center">
@@ -106,7 +108,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
     </div>
     <div class="bg-indigo-700 text-center py-4">
-        <p class="text-indigo-200">Copyright © 2023 <span class="text-white">Bitmap I.T. Solution Pvt. Ltd.</span> All Rights Reserveds</p>
+        <p class="text-indigo-200">Copyright &copy; {{now()->year}} <span class="text-white">Bitmap I.T. Solution Pvt. Ltd.</span> All Rights Reserveds</p>
     </div>
 </footer>
 

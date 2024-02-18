@@ -58,10 +58,10 @@ class PagesController extends Controller
         return view('blogs');
     }
 
-    public function viewbllg($id)
+    public function viewblog($id)
     {
         $blog = Blog::find($id);
-        $related = Blog::where('id','!=',$id)->orderBy('blog_date','desc')->limit(5)->get() ;
+        $related = Blog::where('id','!=',$id)->orderBy('blog_date','desc')->limit(5)->get();
         return view('viewblog',compact('blog','related'));
     }
 
