@@ -15,7 +15,7 @@ class DashboardController extends Controller
     {
         $totalclients = Client::count();
         $totalnotices = Notice::count();
-        $date = Carbon::today()->subDays(30);
+        $date = Carbon::today()->subDays(60);
         $totalvisits = Visit::sum('no_of_visits');
         $visitdate = Visit::where('visit_date', '>=', $date)->pluck('visit_date');
         $visits = Visit::where('visit_date', '>=', $date)->pluck('no_of_visits');
