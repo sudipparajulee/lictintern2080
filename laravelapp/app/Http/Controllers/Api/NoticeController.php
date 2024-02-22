@@ -16,4 +16,54 @@ class NoticeController extends Controller
             'data' => $notices
         ]);
     }
+
+    public function store(Request $request)
+    {
+        $data = $request->validate([
+            'priority' => 'required',
+            'notice_text' => 'required',
+            'notice_date' => 'required',
+            'show' => 'required',
+        ]);
+        Notice::create($data);
+        return response()->json([
+            'code' => 200,
+            'message' => 'Notice created successfully'
+        ]);
+    }
+
+    public function edit($id)
+    {
+        $notice = Notice::find($id);
+        return response()->json([
+            'code' => 200,
+            'data' => $notice
+        ]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = $request->validate([
+            'priority' => 'required',
+            'notice_text' => 'required',
+            'notice_date' => 'required',
+            'show' => 'required',
+        ]);
+        $notice = Notice::find($id);
+        $notice->update($data);
+        return response()->json([
+            'code' => 200,
+            'message' => 'Notice updated successfully'
+        ]);
+    }
+
+    public function destroy(Request $request)
+    {
+        $notice = Notice::find($request->dataid);
+        $notice->delete();
+        return response()->json([
+            'code' => 200,
+            'message' => 'Notice deleted successfully'
+        ]);
+    }
 }
