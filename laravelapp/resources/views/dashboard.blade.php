@@ -24,6 +24,8 @@
             <h1 class="text-xl">Total Visits</h1>
             <h1 class="text-4xl font-bold">{{$totalvisits}}</h1>
         </div>
+
+        <a href="{{route('send.mail')}}">Send Mail</a>
     </div>
 
     <div class="">

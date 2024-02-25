@@ -26,6 +26,7 @@ Route::get('/contact',[PagesController::class,'contact']);
 Route::middleware('auth')->group(function () {
 
     Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('dashboard');
+    Route::get('/send/mail',[DashboardController::class,'sendMail'])->name('send.mail');
 
     Route::get('/notice',[NoticeController::class,'index'])->name('notice.index');
     Route::get('/notice/create',[NoticeController::class,'create'])->name('notice.create');
