@@ -34,7 +34,10 @@ class DashboardController extends Controller
         Mail::send('email.testemail',$data, function($message) use ($useremail,$file) {
             $message->to($useremail)
                 ->subject('This is test mail')
-                ->attach($file);
+                ->attach($file, [
+                    'as' => 'hello.png',
+                    'mime' => 'image/png',
+                ]);
         });
     }
 }
